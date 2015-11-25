@@ -13,7 +13,7 @@ import os                       # help with file handling
 def convert_mp4_to_mp3(indir, outdir):
     print "[%s/*.mp4] --> [%s/*.mp3]" % (indir, outdir)
     files = [] # files for exporting
-    
+
     # Rename files
     os.chdir(download_dir)
     raw_files = os.listdir(os.getcwd())
@@ -35,6 +35,6 @@ def convert_mp4_to_mp3(indir, outdir):
         call(["mplayer", "-novideo", "-nocorrect-pts", "-ao", "pcm:waveheader", indir + "/" + filename + ".mp4"])
         call(["lame", "-h", "-b", "192", "audiodump.wav", outdir + "/" + filename + ".mp3"])
         os.remove("audiodump.wav")
-        os.remove(filename + '.mp4')
-        print 'done with ' + filename
+        # os.remove(filename + '.mp4')
+        print 'done with ' + filename   
 

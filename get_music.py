@@ -22,7 +22,8 @@ os.chdir(download_dir)
 #####
 # SEARCH STRING
 #####
-search_string = ['cheikh lo flavia coelho', 'king ayisoba buffalo soldier']
+search_string = ['Lhasa - La Ilorona - TV5 Acoustic - 02.04.2004']
+#Pedro Infante - Cielito Lindo
 # Make this loopable
 
 #####
