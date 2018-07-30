@@ -22,22 +22,22 @@ os.chdir(download_dir)
 #####
 # SEARCH STRING
 #####
-search_string = ['Lhasa - La Ilorona - TV5 Acoustic - 02.04.2004']
-#Pedro Infante - Cielito Lindo
-# Make this loopable
-
+search_string = ["tSejdjRcwF4", "bkDfJ0zgvAc", "lwi2lRX2vsE", "CmOrAYcYlf0", "8ljHzljQrY8"]
 #####
 # GET LINK
 # Adapted from http://www.codeproject.com/Articles/873060/Python-Search-Youtube-for-Video
 #####
 for search_text in search_string:
 	query_string = urllib.urlencode({"search_query" : search_text})
+	print query_string 
 	r = requests.get("http://www.youtube.com/results?" + query_string)
 	soup = BeautifulSoup(r.content)
 	search_results = re.findall(r'href=\"\/watch\?v=(.{11})', r.content)
+	print search_results 
+	print '---------------------' 
 
 	link = "http://www.youtube.com/watch?v=" + search_results[0]
-
+	# import ipdb; ipdb.set_trace()
 	#####
 	# GET VIDEO
 	##### 
